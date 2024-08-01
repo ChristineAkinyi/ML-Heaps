@@ -1,7 +1,5 @@
 
 
-# A Python3 program to convert min Heap
-# to max Heap
  
 # to heapify a subtree with root
 # at given index
@@ -56,4 +54,3 @@ if __name__ == '__main__':
     print("Max Heap array : ")
     printArray(arr, N)
  
-# This code is contributed by PranchalK

@@ -1,4 +1,4 @@
-# Function to check if the given list represents min-heap or not
+
 def checkMinHeap(A, i):
  
     # if `i` is a leaf node, return true as every leaf node is a heap
