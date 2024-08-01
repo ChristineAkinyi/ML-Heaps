@@ -1,7 +1,5 @@
 # ML-Heaps
 This repository contains code for the following questions:
-
-
  
 # A Python3 program to convert min Heap to max Heap
 
@@ -37,6 +35,20 @@ Print the converted max-heap array using printArray.
 8. Call heapify on the subtree rooted at largest to ensure the subtree maintains the heap property.
 
 # Function to check if the given list represents min-heap or not
+feature/heapcode
+1. Define the function checkMinHeap which takes a list A and an index i as parameters.
+2. Check if i is a leaf node by verifying if 2*i + 2 (the index of the right child) is greater than or equal to the length of the list A.
+3. Return True if i is a leaf node since a leaf node trivially satisfies the min-heap property.
+4. Check if the left child (at index 2*i + 1) is a valid heap:
+-Ensure A[i] (the value at the current node) is less than or equal to A[2*i + 1] (the value of the left child).
+-Recursively call checkMinHeap function on the left child to ensure it is also a min-heap.
+-Assign the result to "left"
+5. Check if the right child (at index 2*i + 2) is a valid heap:
+-If 2*i + 2 is exactly at the end of the list (len(A)), then the right child does not exist, which is valid.
+-Otherwise, ensure A[i] is less than or equal to A[2*i + 2] (the value of the right child).
+-Recursively call checkMinHeap on the right child to ensure it is also a min-heap.
+-Assign the result to right.
+6. Return True if both the left and right subtrees (children) are min-heaps; otherwise, return False.
 
 # Function for heap sort algorithm
 1. Calculate and return the index of the left child of the node at index i. The left child is at position 2*i + 1.
@@ -55,13 +67,11 @@ Replace the root with the last element in the heap (A[size - 1]).
 Call heapify on the root node to maintain the heap property after the removal.
 Return the original root value (top).
 10. Define the heapsort function to sort a list A. Compute the length of the list n.
-python
 11. Build the heap by calling heapify starting from the last internal node ((n - 2) // 2) up to the root node (0).
 12. Sort the list by repeatedly popping the root (maximum element) and placing it at the end of the list. Decrease the size of the heap (n - 1) each time.
 
-# Find the kth kargest eelemnt in a heap
+# Find the kth largest element in a heap
 1. Define the function kLargest that takes a list arr and an integer k as parameters.
-python
 2. Sort the list arr in descending order using sort(reverse=True). This means the largest elements will come first.
 3. Iterate through the first k elements of the sorted list using a for loop with range k
 4. Print each of these k largest elements, separated by a space (end=" " ensures that the elements are printed on the same line).
