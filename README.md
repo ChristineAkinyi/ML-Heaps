@@ -35,6 +35,7 @@ Print the converted max-heap array using printArray.
 8. Call heapify on the subtree rooted at largest to ensure the subtree maintains the heap property.
 
 # Function to check if the given list represents min-heap or not
+feature/heapcode
 1. Define the function checkMinHeap which takes a list A and an index i as parameters.
 2. Check if i is a leaf node by verifying if 2*i + 2 (the index of the right child) is greater than or equal to the length of the list A.
 3. Return True if i is a leaf node since a leaf node trivially satisfies the min-heap property.
